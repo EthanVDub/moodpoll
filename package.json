@@ -1,0 +1,36 @@
+{
+  "name": "moodpoll",
+  "version": "1.0.0",
+  "description": "Simple poll of current mood, logs in db, displays stats",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthanVDub/moodpoll.git"
+  },
+  "author": "Ethan Vander Wiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EthanVDub/moodpoll/issues"
+  },
+  "homepage": "https://github.com/EthanVDub/moodpoll#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.2",
+    "dotenv": "^8.2.0",
+    "history": "^4.10.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.2",
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-styled-flexbox": "^2.0.0",
+    "styled-components": "^5.0.1",
+    "styled-jsx": "^3.2.4",
+    "swr": "^0.1.16"
+  }
+}

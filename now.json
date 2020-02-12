@@ -1,0 +1,8 @@
+{
+    "name": "moodpoll",
+    "version": 2,
+    "env": {
+      "MONGODB_URI": "@my-mongodb-uri-moodpoll",
+      "MONGODB_DB": "@my-mongodb-db-moodpoll"
+    }
+}

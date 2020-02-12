@@ -1,33 +1,64 @@
 import Link from 'next/link';
-import Button from '@material-ui/core/Button'
 import {useState} from 'react';
 import FlexContainer from 'react-styled-flexbox';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Emoji from './emoji';
+import GlobalStyle from '../GlobalStyle';
+
+const Button = styled.button`
+    background: palevioletred;
+    border-radius: 20px;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    padding: 0.025em;
+    padding-bottom: .05em;
+    font-size: 700%;
+
+`
+
+const ToggleButton = styled.button`
+    background: #c2eec7;
+    border-radius: 20px;
+    border: 2px solid #c2eec7;
+    color: white;
+    font-size: 300%;
+`
+
+const StyledPage = styled.div`
+    margin-top: 15em;
+    display: flex;
+    justify-content: space-evenly;
+`
+
+const StyledToggle = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: .5em;
+`
+
+const StyledMain = styled.div`
+    height: 100%;
+`
 
 const ResponseLink = (props) => (
     <div className="response" key={props.response}>
         <Link href={`/success?user=${props.user}&response=${props.response}`} as={"/success"}>
-            <Button variant="contained" color="primary">
+            <Button>
                 {props.children}
             </Button>
         </Link>
     </div>
 );
 
-const StyledResponse = styled(ResponseLink)`
-    background: blue;
-`
-
 
 const Page = (props) => (
-        <FlexContainer justifySpaceAround>
-            <StyledResponse user={props.user} response={5}><Emoji label="joy" symbol="😄"/></StyledResponse>
-            <StyledResponse user={props.user} response={4}><Emoji label="smiling" symbol="🙂"/></StyledResponse>
-            <StyledResponse user={props.user} response={3}><Emoji label="so-so" symbol="😐"/></StyledResponse>
-            <StyledResponse user={props.user} response={2}><Emoji label="frown" symbol="😕"/></StyledResponse>
-            <StyledResponse user={props.user} response={1}><Emoji label="crying" symbol="😭"/></StyledResponse>
-        </FlexContainer>
+        <StyledPage>
+            <ResponseLink user={props.user} response={5}><Emoji label="joy" symbol="😄" /></ResponseLink>
+            <ResponseLink user={props.user} response={4}><Emoji label="smiling" symbol="🙂"/></ResponseLink>
+            <ResponseLink user={props.user} response={3}><Emoji label="so-so" symbol="😐"/></ResponseLink>
+            <ResponseLink user={props.user} response={2}><Emoji label="frown" symbol="😕"/></ResponseLink>
+            <ResponseLink user={props.user} response={1}><Emoji label="crying" symbol="😭"/></ResponseLink>
+        </StyledPage>
     );
 
 
@@ -42,18 +73,11 @@ export default function Index() {
     }
     
     return (
-        <main className="center">
+        <StyledMain>
             <Page user={(user ? "Delaney" : "Ethan")}/>
-            <div className="toggleButton">
-                <Button variant="contained" color="secondary" onClick={changeUser}>{(user ? "Delaney" : "Ethan")}</Button>
-            </div>
-            <style jsx>{`
-                .toggleButton {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                }
-            `}</style>
-        </main>
+            <StyledToggle>
+                <ToggleButton onClick={changeUser}>{(user ? "Delaney" : "Ethan")}</ToggleButton>
+            </StyledToggle>
+        </StyledMain>
     );
 }

@@ -27,8 +27,8 @@ export default function Success() {
     useEffect(() => {
         setMounted(true)
         const timer = setTimeout(() => {
-            router.push("/");
-        }, 3000);
+            window.location.assign('http://google.com');;
+        }, 1500);
         return () => clearTimeout(timer);
     }, [])
 

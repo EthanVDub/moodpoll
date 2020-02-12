@@ -3,8 +3,7 @@ import Button from '@material-ui/core/Button'
 import {useState} from 'react';
 import FlexContainer from 'react-styled-flexbox';
 import styled from 'styled-components';
-
-
+import Emoji from './emoji';
 
 const ResponseLink = (props) => (
     <div className="response" key={props.response}>
@@ -23,11 +22,11 @@ const StyledResponse = styled(ResponseLink)`
 
 const Page = (props) => (
         <FlexContainer justifySpaceAround>
-            <StyledResponse user={props.user} response={1}>D:</StyledResponse>
-            <StyledResponse user={props.user} response={2}>:(</StyledResponse>
-            <StyledResponse user={props.user} response={3}>:|</StyledResponse>
-            <StyledResponse user={props.user} response={4}>:)</StyledResponse>
-            <StyledResponse user={props.user} response={5}>:D</StyledResponse>
+            <StyledResponse user={props.user} response={5}><Emoji label="joy" symbol="😄"/></StyledResponse>
+            <StyledResponse user={props.user} response={4}><Emoji label="smiling" symbol="🙂"/></StyledResponse>
+            <StyledResponse user={props.user} response={3}><Emoji label="so-so" symbol="😐"/></StyledResponse>
+            <StyledResponse user={props.user} response={2}><Emoji label="frown" symbol="😕"/></StyledResponse>
+            <StyledResponse user={props.user} response={1}><Emoji label="crying" symbol="😭"/></StyledResponse>
         </FlexContainer>
     );
 

@@ -28,7 +28,7 @@ export default function Success() {
         setMounted(true)
         const timer = setTimeout(() => {
             window.location.assign('http://google.com');;
-        }, 1500);
+        }, 800);
         return () => clearTimeout(timer);
     }, [])
 

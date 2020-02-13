@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
     question = req.query.question;
   const db = await connectToDatabase(process.env.MONGODB_URI);
 
-  const collection = await db.collection('logs');
+  const collection = await db.collection(process.env.MONGODB_DB);
     console.log(req.query.response)
   await collection.insertOne(
       { "datetime" : moment().format(), "user" : req.query.user, "response" : parseInt(req.query.response)},

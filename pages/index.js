@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import {useState} from 'react';
-import FlexContainer from 'react-styled-flexbox';
 import styled, { css } from 'styled-components';
 import Emoji from './emoji';
-import GlobalStyle from '../GlobalStyle';
+import { useRouter } from 'next/router';
+import {useEffect, useState} from 'react';
 
 const Button = styled.button`
     background: palevioletred;
@@ -67,6 +66,13 @@ export default function Index() {
 
     //False = Ethan, True = Delaney
     const [user, setUser] = useState(false)
+    const router = useRouter();
+    
+    useEffect(() => {
+        if(router.query?.user) {
+            setUser(router.query.user);
+        }
+    }, [router.query.user])
 
     const changeUser = () => {
         setUser(!user);

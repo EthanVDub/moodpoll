@@ -8,7 +8,10 @@ At the Iowa State Library, there is a tablet towards the front with 5 options to
 
 However, I end up wishing I could have data on my own interactions with the system. I decided I would make a simple page using React that I can replicate the functionality of the library tablet, but be able to send my results to a database and eventually compile and look at the results!
 
-I have also added a button that toggles between me and my fiancee so she can use it to record her moods as well! I wont link the current live site because it would mess up the results of the poll, but I will provide a screenshot. No promises this screenshot will be updated as I update the UI
+I have also added a button that toggles between me and my fiancee so she can use it to record her moods as well! I wont link the current live site because it would mess up the results of the poll, but I will provide a screenshot. No promises this screenshot will be updated as I update the UI:
+
+https://github.com/EthanVDub/moodpoll/blob/master/moodpollexample.PNG
+![Example of basic UI](https://github.com/EthanVDub/moodpoll/blob/master/moodpollexample.PNG)
 
 ## Technology Used
 

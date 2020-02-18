@@ -6,6 +6,10 @@ const UserButton = styled.button`
     border: 2px solid #c2eec7;
     color: white;
     font-size: 300%;
+
+    @media (max-width: 768px) {
+        font-size: 250%;
+      }
 `
 
 export default UserButton;

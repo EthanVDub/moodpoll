@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 
-const Main = styled.div`
-    height: 100%;
-
+const Response = styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        margin-top: 0em;
+        margin: 0.05em;
         justify-content: center;
       }
 `
 
-export default Main;
-
+export default Response;

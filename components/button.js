@@ -9,5 +9,11 @@ const Button = styled.button`
     padding-bottom: .05em;
     font-size: 700%;
 
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        font-size: 500%;
+      }
+
 `
 export default Button;

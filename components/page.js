@@ -6,6 +6,12 @@ const StyledPage = styled.div`
     margin-top: 15em;
     display: flex;
     justify-content: space-evenly;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 0em;
+        justify-content: center;
+      }
 `
 
 const Page = (props) => (

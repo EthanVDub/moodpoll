@@ -4,6 +4,9 @@ import styled, { css } from 'styled-components';
     font-size: 10em;
     text-align: center;
     color: palevioletred;
+    @media (max-width: 768px) {
+      font-size: 250%;
+    }
   `;
   
   const Wrapper = styled.section`
